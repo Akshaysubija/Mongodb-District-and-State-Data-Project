@@ -1,7 +1,7 @@
 const District = require('../models/districtModel');
 const State = require('../models/stateModel');
 
-// Add a new district
+// Add a new district //
 const addDistrict = async (req, res) => {
     const { name, population, state_id } = req.body;
     try {
@@ -16,7 +16,7 @@ const addDistrict = async (req, res) => {
     }
 };
 
-// Update district population
+// Update for district population //
 const updateDistrictPopulation = async (req, res) => {
     const { name } = req.params;
     const { population } = req.body;
@@ -31,7 +31,7 @@ const updateDistrictPopulation = async (req, res) => {
     }
 };
 
-// Delete district
+// Delete district //
 const deleteDistrict = async (req, res) => {
     const { name } = req.params;
     try {
@@ -43,7 +43,7 @@ const deleteDistrict = async (req, res) => {
     }
 };
 
-// Group districts by state and sort
+// Group districts by state and sort //
 const groupDistrictsByState = async (req, res) => {
     try {
         const districts = await District.aggregate([
@@ -62,7 +62,7 @@ const groupDistrictsByState = async (req, res) => {
     }
 };
 
-// Join states with districts
+// Join states with districts //
 const joinStatesWithDistricts = async (req, res) => {
     try {
         const districts = await District.aggregate([

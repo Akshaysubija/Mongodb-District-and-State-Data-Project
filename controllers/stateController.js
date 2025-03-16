@@ -1,6 +1,6 @@
 const State = require('../models/stateModel');
 
-// Add a new state
+// Add a new state //
 const addState = async (req, res) => {
     const { name, population, area } = req.body;
     try {
@@ -12,7 +12,7 @@ const addState = async (req, res) => {
     }
 };
 
-// Get the population of a specific state
+// Get the population of a specific state //
 const getStatePopulation = async (req, res) => {
     const { name } = req.params;
     try {
@@ -24,7 +24,7 @@ const getStatePopulation = async (req, res) => {
     }
 };
 
-// Get all states
+// Get all states //
 const getAllStates = async (req, res) => {
     try {
         const states = await State.find();
@@ -34,7 +34,7 @@ const getAllStates = async (req, res) => {
     }
 };
 
-// Calculate total population of all states
+// Calculate total population of all states //
 const getTotalPopulation = async (req, res) => {
     try {
         const states = await State.find();
@@ -45,7 +45,7 @@ const getTotalPopulation = async (req, res) => {
     }
 };
 
-// Calculate average population density
+// Calculate average population density //
 const getAverageDensity = async (req, res) => {
     try {
         const states = await State.find();

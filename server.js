@@ -6,13 +6,13 @@ const districtRoutes = require('./routes/districtRoutes');
 
 dotenv.config();
 
-// Connect to DB
+// Connection to DB  //
 connectDB();
 
 const app = express();
 app.use(express.json());
 
-// Routes
+// Routes Codes //
 app.use('/api', stateRoutes);
 app.use('/api', districtRoutes);
 
